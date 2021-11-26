@@ -1,0 +1,84 @@
+Algorithm_Display_Name,Result_Name,Version,Denominator_Result_Name,VS_Hourly_Statistics,One_Algorithm,Two_Algorithms,Ten_Mins,HCTSA
+QRS Detection: ECG I,result_qrs(1).qrs,2,/Results/DataAvailable:ECGI,,,,,
+QRS Detection: ECG II,result_qrs(2).qrs,2,/Results/DataAvailable:ECGII,,,,,
+QRS Detection: ECG III,result_qrs(3).qrs,2,/Results/DataAvailable:ECGIII,,,,,
+Brady Detection <100,/Results/Brady<100,4,/Results/DataAvailable:HR,,1,1,,
+Brady Detection <90,/Results/Brady<90,4,/Results/DataAvailable:HR,,1,1,,
+Brady Detection <80,/Results/Brady<80,4,/Results/DataAvailable:HR,,1,1,,
+Brady Detection <70,/Results/Brady<70,4,/Results/DataAvailable:HR,,1,1,,
+Apnea Detection,/Results/Apnea,3,/Results/DataAvailable:Resp,,1,1,,
+Periodic Breathing,/Results/PeriodicBreathing,3,/Results/DataAvailable:Resp,,1,1,,
+Brady Detection Pete,/Results/Brady<100-Pete,4,/Results/DataAvailable:HR,,1,1,,
+Desat Detection Pete,/Results/Desat<80-Pete,4,/Results/DataAvailable:SPO2_pct,,1,1,,
+Data Available: Pulse,/Results/DataAvailable:Pulse,4,/Results/DataAvailable:Pulse,,1,1,,
+Data Available: HR,/Results/DataAvailable:HR,4,/Results/DataAvailable:HR,,1,1,,
+Data Available: SPO2_pct,/Results/DataAvailable:SPO2_pct,4,/Results/DataAvailable:SPO2_pct,,1,1,,
+Data Available: Resp,/Results/DataAvailable:Resp,3,/Results/DataAvailable:Resp,,1,1,,
+Data Available: ECG I,/Results/DataAvailable:ECGI,3,/Results/DataAvailable:ECGI,,1,1,,
+Data Available: ECG II,/Results/DataAvailable:ECGII,3,/Results/DataAvailable:ECGII,,1,1,,
+Data Available: ECG III,/Results/DataAvailable:ECGIII,3,/Results/DataAvailable:ECGIII,,1,1,,
+Desat Detection <75,/Results/Desat<75,4,/Results/DataAvailable:SPO2_pct,,1,1,,
+Desat Detection <76,/Results/Desat<76,4,/Results/DataAvailable:SPO2_pct,,,,,
+Desat Detection <77,/Results/Desat<77,4,/Results/DataAvailable:SPO2_pct,,,,,
+Desat Detection <78,/Results/Desat<78,4,/Results/DataAvailable:SPO2_pct,,,,,
+Desat Detection <79,/Results/Desat<79,4,/Results/DataAvailable:SPO2_pct,,,,,
+Desat Detection <80,/Results/Desat<80,4,/Results/DataAvailable:SPO2_pct,,1,1,,
+Desat Detection <81,/Results/Desat<81,4,/Results/DataAvailable:SPO2_pct,,,,,
+Desat Detection <82,/Results/Desat<82,4,/Results/DataAvailable:SPO2_pct,,,,,
+Desat Detection <83,/Results/Desat<83,4,/Results/DataAvailable:SPO2_pct,,,,,
+Desat Detection <84,/Results/Desat<84,4,/Results/DataAvailable:SPO2_pct,,,,,
+Desat Detection <85,/Results/Desat<85,4,/Results/DataAvailable:SPO2_pct,,1,1,,
+Desat Detection <86,/Results/Desat<86,4,/Results/DataAvailable:SPO2_pct,,,,,
+Desat Detection <87,/Results/Desat<87,4,/Results/DataAvailable:SPO2_pct,,,,,
+Desat Detection <88,/Results/Desat<88,4,/Results/DataAvailable:SPO2_pct,,,,,
+Desat Detection <89,/Results/Desat<89,4,/Results/DataAvailable:SPO2_pct,,,,,
+Desat Detection <90,/Results/Desat<90,4,/Results/DataAvailable:SPO2_pct,,1,1,,
+Desat Detection <91,/Results/Desat<91,4,/Results/DataAvailable:SPO2_pct,,,,,
+Desat Detection <92,/Results/Desat<92,4,/Results/DataAvailable:SPO2_pct,,,,,
+Desat Detection <93,/Results/Desat<93,4,/Results/DataAvailable:SPO2_pct,,,,,
+Desat Detection <94,/Results/Desat<94,4,/Results/DataAvailable:SPO2_pct,,,,,
+Desat Detection <95,/Results/Desat<95,4,/Results/DataAvailable:SPO2_pct,,1,1,,
+HR Mean,/Results/HRMean,3,/Results/DataAvailable:HR,1,,,,
+Pulse Mean,/Results/PulseMean,3,/Results/DataAvailable:Pulse,1,,,,
+SPO2_pct Mean,/Results/SPO2_pctMean,3,/Results/DataAvailable:SPO2_pct,1,,,,
+HR Std,/Results/HRStd,3,/Results/DataAvailable:HR,1,,,,
+Pulse Std,/Results/PulseStd,3,/Results/DataAvailable:Pulse,1,,,,
+SPO2_pct Std,/Results/SPO2_pctStd,3,/Results/DataAvailable:SPO2_pct,1,,,,
+HR Skewness,/Results/HRSkewness,3,/Results/DataAvailable:HR,1,,,,
+Pulse Skewness,/Results/PulseSkewness,3,/Results/DataAvailable:Pulse,1,,,,
+SPO2_pct Skewness,/Results/SPO2_pctSkewness,3,/Results/DataAvailable:SPO2_pct,1,,,,
+HR Kurtosis,/Results/HRKurtosis,3,/Results/DataAvailable:HR,1,,,,
+Pulse Kurtosis,/Results/PulseKurtosis,3,/Results/DataAvailable:Pulse,1,,,,
+SPO2_pct Kurtosis,/Results/SPO2_pctKurtosis,3,/Results/DataAvailable:SPO2_pct,1,,,,
+HCTSA FC_Surprise HR How Surprised,/Results/HCTSA_FC_Surprise_HR_HowSurprised,2,/Results/DataAvailable:HR,,,,,1
+HCTSA SB_MotifTwo HR Prob Increases,/Results/HCTSA_SB_MotifTwo_HR_ProbIncreases,2,/Results/DataAvailable:HR,,,,,1
+HCTSA PH_Walker SPO2 Std Rand Walk,/Results/HCTSA_PH_Walker_SPO2_StdRandWalk,2,/Results/DataAvailable:SPO2_pct,,,,,1
+HCTSA EX_MovingThreshold HR Avg Thresh,/Results/HCTSA_EX_MovingThreshold_HR_AvgThresh,2,/Results/DataAvailable:HR,,,,,1
+HCTSA EX_MovingThreshold SPO2 Avg Thresh,/Results/HCTSA_EX_MovingThreshold_SPO2_AvgThres,2,/Results/DataAvailable:SPO2_pct,,,,,1
+HCTSA DN_cv HR Std Dist,/Results/HCTSA_DN_cv_HR_StdDist,2,/Results/DataAvailable:HR,,,,,1
+HCTSA DN_Cumulants HR Skew Dist,/Results/HCTSA_DN_Cumulants_HR_SkewDist,2,/Results/DataAvailable:HR,,,,,1
+HCTSA DN_Quantile HR Max Dist,/Results/HCTSA_DN_Quantile_HR_MaxDist,2,/Results/DataAvailable:HR,,,,,1
+HCTSA SB_TransitionMatrix3 HR Sym Autocorr,/Results/HCTSA_SB_TransitionMatrix3_HR_SymAutocorr,2,/Results/DataAvailable:HR,,,,,1
+HCTSA SB_MotifThree HR Sym Entropy,/Results/HCTSA_SB_MotifThree_HR_SymEntropy,2,/Results/DataAvailable:HR,,,,,1
+HCTSA MF_arfit HR Wavelet Autoregress,/Results/HCTSA_MF_arfit_HR_WaveletAutoregress,2,/Results/DataAvailable:HR,,,,,1
+HCTSA SB_MotifThree HR Sym Diffs,/Results/HCTSA_SB_MotifThree_HR_SymDiffs,2,/Results/DataAvailable:HR,,,,,1
+HCTSA SY_StdNthDer HR 17thDeriv,/Results/HCTSA_SY_StdNthDer_HR_17thDeriv,2,/Results/DataAvailable:HR,,,,,1
+HCTSA DN_RemovePoints SPO2 Mean Dist,/Results/HCTSA_DN_RemovePoints_SPO2_MeanDist,2,/Results/DataAvailable:SPO2_pct,,,,,1
+HCTSA SB_BinaryStats SPO2 Sym IQR,/Results/HCTSA_SB_BinaryStats_SPO2_SymIQR,2,/Results/DataAvailable:SPO2_pct,,,,,1
+HCTSA MF_arfit SPO2 Wavelet Autoregress,/Results/HCTSA_MF_arfit_SPO2_WaveletAutoregress,2,/Results/DataAvailable:SPO2_pct,,,,,1
+HCTSA SB_TransitionMatrix2 SPO2 Sym Eigen,/Results/HCTSA_SB_TransitionMatrix2_SPO2_SymEigen,2,/Results/DataAvailable:SPO2_pct,,,,,1
+HCTSA CO_AutoCorr SPO2,/Results/HCTSA_CO_AutoCorr_SPO2,2,/Results/DataAvailable:SPO2_pct,,,,,1
+HCTSA SB_MotifThree SPO2 Sym Entropy,/Results/HCTSA_SB_MotifThree_SPO2_SymEntropy,2,/Results/DataAvailable:SPO2_pct,,,,,1
+HCTSA SB_TransitionMatrix1 SPO2 Sym Bin,/Results/HCTSA_SB_TransitionMatrix1_SPO2_SymBin,2,/Results/DataAvailable:SPO2_pct,,,,,1
+HCTSA ST_LocalExtrema SPO2 Stationarity Min,/Results/HCTSA_ST_LocalExtrema_SPO2_StationMin,2,/Results/DataAvailable:SPO2_pct,,,,,1
+HCTSA ST_LocalExtrema HR Stationarity Min,/Results/HCTSA_ST_LocalExtrema_HR_StationMin,2,/Results/DataAvailable:HR,,,,,1
+HCTSA CO_tc3 HR Correlaton Mean,/Results/HCTSA_CO_tc3_HR_CorrMean,2,/Results/DataAvailable:HR,,,,,1
+HCTSA CO_tc3 SPO2 Correlaton Mean,/Results/HCTSA_CO_tc3_SPO2_CorrMean,2,/Results/DataAvailable:SPO2_pct,,,,,1
+Brady Desat,/Results/BradyDesat,4,/Results/DataAvailable:SPO2_pct,,1,1,,
+Brady Desat Pete,/Results/BradyDesatPete,4,/Results/DataAvailable:SPO2_pct,,1,1,,
+ABD,/Results/ABD,3,/Results/DataAvailable:Resp,,1,1,,
+Max Cross Correlation HR SPO2_pct,/Results/MaxCrossCorrHR_SPO2_pct,3,/Results/DataAvailable:SPO2_pct,,,,1,
+Max Cross Correlation Pulse SPO2_pct,/Results/MaxCrossCorrPulse_SPO2_pct,3,/Results/DataAvailable:SPO2_pct,,,,1,
+Flat Detection Resp >10s,/Results/FlatResp>10s,1,/Results/DataAvailable:Resp,,1,,,
+Hyperoxemia Detection >95,/Results/Hyperoxemia>95,1,/Results/DataAvailable:SPO2_pct,,1,,,
+Hyperoxemia Detection >98,/Results/Hyperoxemia>98,1,/Results/DataAvailable:SPO2_pct,,1,,,

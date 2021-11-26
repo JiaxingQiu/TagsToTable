@@ -1,0 +1,28 @@
+function mtrx_error_source = get_error_source(mtrx_error, resultfile)
+
+mtrx_error_source = [];
+
+if ~isempty(mtrx_error)
+     for j=1:length(resultfile.info)
+        if isempty(resultfile.info(j).info)
+            continue
+        end
+        try
+        if any( floor(mtrx_error(:,1)/86400+datenum(1970,1,1)) == resultfile.info(j).info.dayzero)
+            mtrx_error_source = [
+                mtrx_error_source; ...
+                [string(resultfile.info(j).info.startdate),...
+                 string(resultfile.info(j).info.stopdate),...
+                 string(j),...
+                 string(resultfile.info(j).info.file),...
+                 string(resultfile.info(j).info.dayzero),...
+                ]
+            ];
+        end
+        catch ME
+            ME.message
+        end
+    end
+end
+
+end
