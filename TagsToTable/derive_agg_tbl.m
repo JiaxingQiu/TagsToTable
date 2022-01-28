@@ -11,7 +11,7 @@ function agg_tbl_sbj = derive_agg_tbl(id, srcfile, result_clean_avail, result_cl
         agg_tbl_avails = table(unique(timekey_avail), dur_tbl_avail.sum_Var2);
         agg_tbl_avails.Properties.VariableNames = {'timekey_avail_utc', 'total_avail_duration_s'};
 
-        % nominator
+        % numerator
         if unit == 3600
             timekey_event = string(datetime(result_clean_event.tagtable_clean.start_posixtime_s, 'ConvertFrom','posixtime','TicksPerSecond',1e3,'Format','dd-MMM-yyyy HH'));% key
         elseif unit == 86400

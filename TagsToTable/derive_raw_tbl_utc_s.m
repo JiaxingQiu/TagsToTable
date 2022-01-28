@@ -1,4 +1,4 @@
-function [result_clean, result_error] = derive_raw_tbl_utc_s(resultfile, algname, vernum)
+function [result_clean, result_error] = derive_raw_tbl_utc_s(resultfile, algname, vernum, event_min, event_max)
 
 
 %% ---------------------------------------------- Description ------------------------------------------------
@@ -85,6 +85,11 @@ if ~isempty(mtrx_clean)
     stop_datetime = datetime(mtrx_clean(:,2), 'ConvertFrom','posixtime','TicksPerSecond',1e3,'Format','dd-MMM-yyyy HH:mm:ss.SSS');
     result_clean.tagtable_clean = table(start_datetime, stop_datetime, mtrx_clean(:,1), mtrx_clean(:,2), mtrx_clean(:,3));
     result_clean.tagtable_clean.Properties.VariableNames = {'start_datetime','stop_datetime','start_posixtime_s','stop_posixtime_s','sorted_chunk_id'};
+    % ---- Filter event duration by requested min and max thresholds ---- 
+    tagtable = result_clean.tagtable_clean;
+    raw_dur = tagtable.stop_posixtime_s - tagtable.start_posixtime_s;
+    row_idx = (raw_dur>=event_min) & (raw_dur<=event_max);
+    result_clean.tagtable_clean = tagtable(row_idx,:);
 end
 
 

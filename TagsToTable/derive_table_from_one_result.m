@@ -1,4 +1,4 @@
-function derive_table_from_one_result(source_folder, save_folder, algname, output, dict)
+function derive_table_from_one_result(source_folder, save_folder, algname, output, dict, event_min, event_max)
 
 %% --------- Description ------------
 % Usage:
@@ -27,9 +27,9 @@ avail_algname = alg_dict.denom.algname;
 avail_vernum = alg_dict.denom.vernum;
 
 if strcmp(output_obj.name, "raw_utc_s") % second raw table
-    derive_raw_tbl_utc_s_cohort(source_folder, save_folder, event_algname, event_vernum);
+    derive_raw_tbl_utc_s_cohort(source_folder, save_folder, event_algname, event_vernum, event_min, event_max);
 else
-    derive_agg_tbl_cohort(source_folder, save_folder, avail_algname, avail_vernum, event_algname, event_vernum, output_obj);
+    derive_agg_tbl_cohort(source_folder, save_folder, avail_algname, avail_vernum, event_algname, event_vernum, output_obj, event_min, event_max);
 end
 
 end

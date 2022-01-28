@@ -1,4 +1,4 @@
-function derive_raw_tbl_utc_s_cohort(source_folder, save_folder, algname, vernum)
+function derive_raw_tbl_utc_s_cohort(source_folder, save_folder, algname, vernum, event_min, event_max)
 %% ---------------------------------------------- Description ------------------------------------------------
 
 % Usage: concat raw table for a cohort in a folder
@@ -33,7 +33,7 @@ for i=1:length(allfileinfo)
         resultfiledata = get_result_file(allfileinfo(i));
         
         % ---- Prepare cleaned results and error results in utc seconds ----
-        [result_clean, ~] = derive_raw_tbl_utc_s(resultfiledata, algname, vernum);
+        [result_clean, ~] = derive_raw_tbl_utc_s(resultfiledata, algname, vernum, event_min, event_max);
 
         % ---- Create table for this subject ----
         if ~isempty(result_clean.tagtable_clean) 

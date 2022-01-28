@@ -1,4 +1,4 @@
-function derive_agg_tbl_cohort(source_folder, save_folder, avail_algname, avail_vernum, event_algname, event_vernum, output_obj)
+function derive_agg_tbl_cohort(source_folder, save_folder, avail_algname, avail_vernum, event_algname, event_vernum, output_obj, event_min, event_max)
 
 
 %% ---------------------------------------------- Description ------------------------------------------------
@@ -48,24 +48,25 @@ for i=1:length(allfileinfo)
         id = resultfiledata.id;
         srcfile = resultfiledata.srcfile;
         % ---- Prepare cleaned results and error results in utc seconds ----
-        [result_clean_avail, result_error_avail] = derive_raw_tbl_utc_s(resultfiledata, avail_algname, avail_vernum);% denominator
+        [result_clean_avail, result_error_avail] = derive_raw_tbl_utc_s(resultfiledata, avail_algname, avail_vernum, 0, 86400);% denominator
 
         if strcmp(avail_algname, event_algname)
             result_clean_event = result_clean_avail;
             result_error_event = result_error_avail;
         else
-            [result_clean_event, result_error_event] = derive_raw_tbl_utc_s(resultfiledata, event_algname, event_vernum);% nominator
+            [result_clean_event, result_error_event] = derive_raw_tbl_utc_s(resultfiledata, event_algname, event_vernum, event_min, event_max);% nominator
         end
 
         if isempty(result_clean_avail.tagtable_clean)
             alg_avail_not_run = [alg_avail_not_run; string(resultfiledata.id); string(resultfiledata.srcfile)];
             continue
         end
-         if isempty(result_clean_event.tagtable_clean)
+        if isempty(result_clean_event.tagtable_clean)
             alg_event_not_run = [alg_event_not_run; string(resultfiledata.id); string(resultfiledata.srcfile)];
             continue
-         end
-
+        end
+         
+        
         % ---- Derive aggregated result table object for this subject ----
         agg_tbl_sbj = derive_agg_tbl(id, srcfile, result_clean_avail, result_clean_event, unit);
         

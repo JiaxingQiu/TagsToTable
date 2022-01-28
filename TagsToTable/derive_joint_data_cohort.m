@@ -1,4 +1,4 @@
-function derive_joint_data_cohort(source_folder, save_folder, alg_dict1, alg_dict2, output_obj)
+function derive_joint_data_cohort(source_folder, save_folder, alg_dict1, alg_dict2, output_obj, event_min, event_max)
 
 % specify 2 algorithm and their denominator algorithms
 event_algname1 = alg_dict1.algname;
@@ -53,22 +53,22 @@ for i=1:length(allfileinfo)
     
     % Prepare cleaned result object for algorithm 1 
     try
-        [result_clean_avail1, ~] = derive_raw_tbl_utc_s(resultfiledata, avail_algname1, avail_vernum1);% denominator
+        [result_clean_avail1, ~] = derive_raw_tbl_utc_s(resultfiledata, avail_algname1, avail_vernum1, 0, 86400);% denominator
         if strcmp(avail_algname1, event_algname1)
             result_clean_event1 = result_clean_avail1;
         else
-            [result_clean_event1, ~] = derive_raw_tbl_utc_s(resultfiledata, event_algname1, event_vernum1);% nominator
+            [result_clean_event1, ~] = derive_raw_tbl_utc_s(resultfiledata, event_algname1, event_vernum1, event_min, event_max);% nominator
         end
     catch
         error(strcat('Error preparing cleaned result matrix for algorithm',avail_algname1,' on file ', string(i)));
     end
     % Prepare cleaned result object for algorithm 2 
     try
-        [result_clean_avail2, ~] = derive_raw_tbl_utc_s(resultfiledata, avail_algname2, avail_vernum2);% denominator
+        [result_clean_avail2, ~] = derive_raw_tbl_utc_s(resultfiledata, avail_algname2, avail_vernum2, 0, 86400);% denominator
         if strcmp(avail_algname2, event_algname2)
             result_clean_event2 = result_clean_avail2;
         else
-            [result_clean_event2, ~] = derive_raw_tbl_utc_s(resultfiledata, event_algname2, event_vernum2);% nominator
+            [result_clean_event2, ~] = derive_raw_tbl_utc_s(resultfiledata, event_algname2, event_vernum2, event_min, event_max);% nominator
         end
     catch
         error(strcat('Error preparing cleaned result matrix for algorithm',avail_algname2,' on file ', string(i)));
@@ -92,7 +92,7 @@ for i=1:length(allfileinfo)
     
     % Find overlap for denominator matrices in utc second
     mtrx_joint_avail = derive_find_overlap(mtrx_clean_avail1, mtrx_clean_avail2);
-    % Find overlap for nominator matrices in utc second
+    % Find overlap for numerator matrices in utc second
     mtrx_joint_event = derive_find_overlap(mtrx_clean_event1, mtrx_clean_event2);
     
     % individual denominator joint result

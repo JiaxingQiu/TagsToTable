@@ -1,4 +1,4 @@
-function derive_table_from_two_results(source_folder, save_folder, algname1, algname2, output, dict)
+function derive_table_from_two_results(source_folder, save_folder, algname1, algname2, output, dict, event_min, event_max)
 %% --------- Description ------------
 % Usage:
 %     wrapping function to be called by GUI
@@ -24,7 +24,7 @@ function derive_table_from_two_results(source_folder, save_folder, algname1, alg
 
 
 % call function by output type
-derive_joint_data_cohort(source_folder, save_folder, alg_dict1, alg_dict2, output_obj)
+derive_joint_data_cohort(source_folder, save_folder, alg_dict1, alg_dict2, output_obj, event_min, event_max)
 
 
 end
