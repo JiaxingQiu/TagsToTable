@@ -2,7 +2,7 @@
 
 Welcome to the last step of "UFC - BAP/HDF5Viwer - MergeTags - TTT" [Software Chain](https://github.com/UVA-CAMA/NICUHDF5Viewer/wiki).
 - In short, the software chain calculates clinically meaningful information from NICU bedside monitoring data, including  unfavorable events during infants' respiratory trajectory, statistical moments of Vital signs or chest-impedience signals, etc. 
-- The softwares are developed by Center for Advanced Medical Analytics (CAMA), school of Medicine, UVA. 
+- The softwares are developed by Jiaxing Qiu, Center for Advanced Medical Analytics (CAMA), school of Medicine, UVA. 
 
 ### How to use TTT
 - download and intall TTT from [here](https://github.com/JiaxingQiu/TagsToTable/releases/tag/v1.1)
